@@ -23,11 +23,5 @@ router.route('/password/update').put(isAuthenticatedUser, updatePassword)
 
 router.route('/me/update').put(isAuthenticatedUser, updateProfile)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 29aa5dbeeea7a1b161b164545c063ef0336f83e9
-
-
 
 module.exports  = router 
