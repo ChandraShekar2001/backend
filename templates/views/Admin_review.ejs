@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('/backend/templates/partials/Admin_head'); %>
+    <link rel="stylesheet" href="/backend/public/css/Admin_User_producnts.css">
+    <link rel="stylesheet" href="/backend/public/css/Admin_review.css">
+    <title>Reviews</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        
+        <%- include('/backend/templates/partials/Admin_sidebar'); %>
+
+        <div class="users">
+            <div class="vl"></div>
+            <div class="container-users">
+                <!-- <h3 class="all-users">ALL REVIEWS</h3> -->
+                <div class="review">
+                    <form class="form1" action="/api/v1/forgot" method="POST" id="myForm">
+                        <div class="heading1">
+                            <h3 class="name">ALL REVIEWS</h3>
+                        </div>
+                        <div class="credentials">
+                            <input type="text" name="username" id="username" placeholder="User ID*">
+                            <button type="submit" class="btn btn-dark login">SEARCH</button>
+                        </div>
+                    </form>
+                </div>
+
+                <table class="table table-striped">
+                    <thead class="table-headings">
+                        <tr>
+                            <th scope="col">Review ID</th>
+                            <th scope="col">User</th>
+                            <th scope="col">Comment</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-rows">
+
+                        <tr>
+                            <td>262309u0950923</td>
+                            <td>Processing</td>
+                            <td>apple is next level</td>
+                            <td>5</td>
+                            <td><a href=""><i class="bi bi-pencil-fill"></i></a><a href=""><i
+                                        class="bi bi-trash-fill"></i></a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/backend/public/JS/Admin_User_products.js"></script>
+</body>
+
+</html>

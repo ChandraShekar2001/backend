@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/Admin_head.ejs') %>
+    <link rel="stylesheet" href="/css/Admin_User_products.css">
+    <title>users</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <%- include('../partials/Admin_sidebar'); %>
+
+         <div class="users">
+            <div class="vl"></div>  
+            <div class="container-users">
+                <h3 class="all-users">ALL USERS</h3>
+                <table class="table table-striped">
+                    <thead class="table-headings">
+                        <tr>
+                            <th scope="col">User ID</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-rows">
+                         <% for (i = 0; i<userss.length;i++) { %>
+                        <tr>
+                            
+                            <td><%=userss[i]._id %></td>
+                            <td><%=userss[i].email %></td>
+                            <td><%=userss[i].name %></td>
+<<<<<<< HEAD
+                            <td><%=userss[i].role %></td>
+                            <td><a href="/api/v1/admin/<%= userss[i]._id %>"><i class="bi bi-pencil-fill"></i></a>
+                                <form action="/api/v1/admin/delete/<%= userss[i]._id %>" method="post"><button type="submit" class="btn btn-primary"><i class="bi bi-trash-fill"></i></button></form>
+                                </td>
+=======
+                            <td><a href=""><%=userss[i].role %></a></td>
+                            <td><a href=`/api/v1/admin/Admin_updateForm/${<%= userss[i]._id %>}`><i class="bi bi-pencil-fill"></i></a><a href=""><i
+                                        class="bi bi-trash-fill"></i></a></td>
+>>>>>>> 29aa5dbeeea7a1b161b164545c063ef0336f83e9
+                        </tr>
+                        <% } %> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+<<<<<<< HEAD
+    <script src="/JS/Admin_User_products.js"></script>
+=======
+    <script src="/backend/public/JS/Admin_User_products.js"></script>
+>>>>>>> 29aa5dbeeea7a1b161b164545c063ef0336f83e9
+</body>
+
+</html>

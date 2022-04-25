@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('/backend/templates/partials/Admin_head'); %>
+    <link rel="stylesheet" href="/backend/public/css/Admin_User_producnts.css">
+    <title>Orders</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        
+        <%- include('/backend/templates/partials/Admin_sidebar'); %>
+
+        <div class="users">
+            <div class="vl"></div>  
+            <div class="container-users">
+                <h3 class="all-users">ALL ORDERS</h3>
+                <table class="table table-striped">
+                    <thead class="table-headings">
+                        <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Items Qty</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-rows">
+
+                        <tr>
+                            <% (for i in orderss) { %>
+                            <td><%=orderss._id %></td>
+                            <td><%=orderss.orderStatus %></td>
+                            <td>1</td>
+                            <td><a href=""><%=orderss.totalPrice %></a></td>
+                            <td><a href="/"><i class="bi bi-pencil-fill"></i></a><a href=""><i
+                                        class="bi bi-trash-fill"></i></a></td>
+                                        <% } %>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+     
+    <script src="/backend/public/JS/Admin_User_products.js"></script>
+</body>
+
+</html>

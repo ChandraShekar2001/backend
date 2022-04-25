@@ -1,0 +1,11 @@
+.side-bar{
+    height:800px;
+    width:280px;
+    border:1px solid black;
+    margin-top: 15%;
+}
+
+.side-bar a{
+    font-size:1.5rem;
+    color:black;
+}

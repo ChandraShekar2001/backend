@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('/backend/templates/partials/Admin_head'); %>
+    <link rel="stylesheet" href="/backend/public/css/Admin_User_producnts.css">
+    <link rel="stylesheet" href="/backend/public/css/Admin_processorder.css">
+    <title>processOrder</title>
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <%- include('/backend/templates/partials/Admin_sidebar'); %>
+
+      <div class="vl"></div>
+      <div class="processorder">
+        <div class="shipping-info heading" id="shipping-info">
+          <h3>Shipping Info</h3>
+          <div class="left">
+            <p>Name:</p>
+            <p>Phone:</p>
+            <p>Name:</p>
+            <p>Phone:</p>
+          </div>
+        </div>
+        <div class="payment heading">
+          <h3>Payment</h3>
+          <div class="left">
+            <p>Name:</p>
+            <p>Name:</p>
+            <p>Phone:</p>
+        
+          </div>
+
+        </div>
+        <div class="order-status heading">
+          <h3>Order Status</h3>
+          <div class="left">
+            <p>Name:</p>
+          </div>
+
+        </div>
+        <div class="your-cart-items heading">
+          <h3>Youe Cart Items</h3>
+
+        </div>
+      </div>
+
+      <div class="choose-category">
+        <div class="vl"></div>
+        <div class="category-input">
+          <div class="category">
+            <select name="" id="select" class="select-category">choose-category
+              <option value="" class="cat">choose-category</option>
+              <option value="" class="cat">Shipped</option>
+            </select>
+            <button class="btn-dark">PROCESS</button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <script src="/backend/public/JS/Admin_User_products.js"></script>
+
+</body>
+
+</html>

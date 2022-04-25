@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <title>Product-Page</title>
+</head>
+
+<body>
+
+    <%- include('../partials/navbar') %>
+
+        <div class="test">
+            <div class="box-drop dis">
+                <a href="/cart">Your Cart</a>
+                <a href="#">Wishlist</a>
+                <a href="#">Checkout</a>
+            </div>
+        </div>
+
+        <div class="test1">
+            <div class="box-drop dis">
+                <h6>Welcome, <%= user.name %>
+                </h6>
+                <a href="/acc">Your Account</a>
+                <a href="#">Your Orders</a>
+                <a href="/logout" class="logging-out">Log out</a>
+            </div>
+        </div>
+        <div class="product-main-info">
+            <div class="row">
+                <div class="col-md-8 product-images">
+                    <div class="all-product-images border">
+                        <div class="grid-img-box">
+                            <img src="./Images/realme Book.png" alt="..." class="grid-img">
+                        </div>
+                        <div class="grid-img-box">
+                            <img src="./Images/realme Band 2.png" alt="..." class="grid-img">
+                        </div>
+                        <div class="grid-img-box">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="..." class="grid-img">
+                        </div>
+                        <div class="grid-img-box">
+                            <img src="./Images/realme Pad.png" alt="..." class="grid-img">
+                        </div>
+                    </div>
+                    <div class="product-current-image border">
+                        <img src="./Images/realme Book.png" alt="..." class="main-img">
+                        <img src="./Images/realme Band 2.png" alt="..." class="main-img">
+                        <img src="./Images/realme Cobble Bluetooth.png" alt="..." class="main-img">
+                        <img src="./Images/realme Pad.png" alt="..." class="main-img">
+                    </div>
+                </div>
+                <div class="col-md-4 product-info border">
+                    <div class="product-details font-poppin ">
+                        <div class="product-name ">
+                            <%=product.name%>
+                        </div>
+                        <!-- <div class="product-model ">(4GB , 64GB)</div> -->
+                    </div>
+                    <div class="product-price-rating font-poppin">
+                        <div class="product-price-box ">
+                            <div class="product-price">
+                                <i class="fa-solid fa-indian-rupee-sign" style="font-size: 1.5rem;margin: 0 auto;"></i>
+                                <%=product.price%>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product-description ">
+                        <div class="product-rating">
+                            Rating <%=product.ratings%>
+                                <div class="rating-star">
+                                    <%if (product.ratings>= 1){%>
+                                        <span class="fa fa-star checked"></span>
+                                        <%} else {%>
+                                            <span class="fa fa-star"></span>
+                                            <%}%>
+                                                <%if (product.ratings>= 2){%>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <%} else {%>
+                                                        <span class="fa fa-star"></span>
+                                                        <%}%>
+                                                            <%if (product.ratings>= 3){%>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <%} else {%>
+                                                                    <span class="fa fa-star"></span>
+                                                                    <%}%>
+                                                                        <%if (product.ratings>= 4){%>
+                                                                            <span class="fa fa-star checked"></span>
+                                                                            <%} else {%>
+                                                                                <span class="fa fa-star"></span>
+                                                                                <%}%>
+                                                                                    <%if (product.ratings>= 5){%>
+                                                                                        <span
+                                                                                            class="fa fa-star checked"></span>
+                                                                                        <%} else {%>
+                                                                                            <span
+                                                                                                class="fa fa-star"></span>
+                                                                                            <%}%>
+                                                                                                <!-- <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> -->
+                                </div>
+                        </div>
+                        <p class="font-poppin ">
+                            <%=product.description%>
+                                <!-- MediaTek Helio G85 Octa-core Processor <br>
+                        4 GB RAM | 128 GB ROM | Expandable Upto 256 GB <br>
+                        16.51 cm (6.5 inch) HD+ Display <br>
+                        50MP+2MP+2MP Primary Camera | 8MP Front Camera <br>
+                        6000 mAh Battery <br> -->
+                        </p>
+                    </div>
+                    <!-- <div class="product-options ">
+                    <div class="product-colors">
+                        <p>
+                            Color
+                        </p>
+
+                        <div class="color-options">
+                            <div class="option btn-outline-dark">
+                                Stargaze White
+                            </div>
+                            <div class="option btn-outline-dark">
+                                Meteor Black
+                            </div>
+                        </div>
+
+                        <p>
+                            Configuration
+                        </p>
+
+                        <div class="configuration">
+                            <div class="option btn-outline-dark">
+                                4GB+64GB
+                            </div>
+                            <div class="option btn-outline-dark">
+                                6GB+128GB
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    <div class="product-purchase ">
+
+                        <form action="" method="post" class="add-cart btn-outline-warning">
+                            <!-- <div class="btn-outline-warning"> -->
+                            Add to cart
+                            <!-- </div> -->
+                        </form>
+                        <div class="buy-now btn-outline-primary">
+                            Buy now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recomended-deals">
+            <div class="recomended-products-heading">
+                Recomended Products
+            </div>
+
+            <div class="background background-1">
+                <!-- Carousel -->
+                <div id="demo3" class="carousel slide" data-bs-ride="carousel">
+                    <!-- <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo3" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo3" data-bs-slide-to="1"></button>
+                </div> -->
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row slide-1">
+                                <div class="col-3 deal-1">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[0].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[0].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 deal-2">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[1].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[1].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 deal-3">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[2].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[2].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 deal-4">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[3].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[3].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row slide-2 ">
+                                <div class="col-3 deal-5">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[4].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[4].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 deal-6">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[5].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[5].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 deal-7">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[6].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[6].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 deal-8">
+                                    <div class="card">
+                                        <div class="offer"><i class="fa-solid fa-indian-rupee-sign"
+                                                style="font-size: 0.8rem;margin: 0 auto;color: #efefef"></i>500 Off
+                                        </div>
+                                        <img src="./Images/realme Pad.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>
+                                                    <%=suggestedProducts[7].name%>
+                                                </strong></p>
+                                            <p class="card-text">From,<i class="fa-solid fa-indian-rupee-sign"
+                                                    style="font-size: 1rem;margin: 0 auto;"></i>
+                                                <%=suggestedProducts[7].price%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon back-button"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon next-button"></span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="all-product-details ">
+            <div class="details-navigation border">
+                <div class="product-specs">
+                    Overview
+                </div>
+                <div class="product-reviews">
+                    <p>
+                        Reviews
+                    </p>
+                    <div class="rating-star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p>
+                        3.0
+                    </p>
+                </div>
+            </div>
+            <div class="product-specs-main border">
+                <div class="main-heading">
+                    Overview
+                </div>
+                <div class="general-specs all-specs-category-box">
+                    <%=product.description%>
+                </div>
+            </div>
+            <!-- <div class="product-overview border">product overview</div> -->
+
+            <%if(reviews.length==0) {%>
+                <div class="product-reviews-all border">
+                    <div class="main-heading">
+                        Reviews
+                    </div>
+                    <div class="product-reviews-none ">
+                        There are no reviews yet.
+                    </div>
+                </div>
+                <%} else{%>
+                    <div class="product-reviews-all border">
+                        <div class="main-heading">
+                            Reviews
+                        </div>
+                        <%for (let i=0; i < reviews.length; i++){%>
+                            <div class="individual-review">
+                                <div class="individual-review-box ">
+                                    <div class="row user-id-rating">
+                                        <div class="col-md-1 user-dp">
+                                            <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                                        </div>
+                                        <div class="col-md-3 user-name-review-time">
+                                            <div class="user-name">
+                                                <%=reviews[i].name%>
+                                            </div>
+                                            <!-- <div class="review-time">
+                                date time
+                            </div> -->
+                                        </div>
+                                        <div class="col-md-2 offset-md-6 user-rating">
+                                            <div class="rating-star">
+                                                <%if (product.ratings>= 1){%>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <%} else {%>
+                                                        <span class="fa fa-star"></span>
+                                                        <%}%>
+                                                            <%if (product.ratings>= 2){%>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <%} else {%>
+                                                                    <span class="fa fa-star"></span>
+                                                                    <%}%>
+                                                                        <%if (product.ratings>= 3){%>
+                                                                            <span class="fa fa-star checked"></span>
+                                                                            <%} else {%>
+                                                                                <span class="fa fa-star"></span>
+                                                                                <%}%>
+                                                                                    <%if (product.ratings>= 4){%>
+                                                                                        <span
+                                                                                            class="fa fa-star checked"></span>
+                                                                                        <%} else {%>
+                                                                                            <span
+                                                                                                class="fa fa-star"></span>
+                                                                                            <%}%>
+                                                                                                <%if (product.ratings>=
+                                                                                                    5){%>
+                                                                                                    <span
+                                                                                                        class="fa fa-star checked"></span>
+                                                                                                    <%} else {%>
+                                                                                                        <span
+                                                                                                            class="fa fa-star"></span>
+                                                                                                        <%}%>
+                                                                                                            <!-- <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row user-images">
+                                        <div class="image">
+                                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                                        </div>
+
+                                        <div class="image">
+                                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                                        </div>
+
+                                        <div class="image">
+                                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                                        </div>
+
+                                        <div class="image">
+                                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row user-review">
+                                        <div class="user-review-txt">
+                                            <%=reviews[i].comment%>
+                                        </div>
+                                        <div class="like-review">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
+                                <!-- <div class="individual-review">
+                <div class="individual-review-box ">
+                    <div class="row user-id-rating">
+                        <div class="col-md-1 user-dp">
+                            <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                        </div>
+                        <div class="col-md-3 user-name-review-time">
+                            <div class="user-name">
+                                User name
+                            </div>
+                            <div class="review-time">
+                                date time
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-6 user-rating">
+                            <div class="rating-star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row user-images">
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row user-review">
+                        <div class="user-review-txt">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, error?
+                        </div>
+                        <div class="like-review">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="individual-review">
+                <div class="individual-review-box ">
+                    <div class="row user-id-rating">
+                        <div class="col-md-1 user-dp">
+                            <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                        </div>
+                        <div class="col-md-3 user-name-review-time">
+                            <div class="user-name">
+                                User name
+                            </div>
+                            <div class="review-time">
+                                date time
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-6 user-rating">
+                            <div class="rating-star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row user-images">
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row user-review">
+                        <div class="user-review-txt">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, error?
+                        </div>
+                        <div class="like-review">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="individual-review">
+                <div class="individual-review-box ">
+                    <div class="row user-id-rating">
+                        <div class="col-md-1 user-dp">
+                            <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                        </div>
+                        <div class="col-md-3 user-name-review-time">
+                            <div class="user-name">
+                                User name
+                            </div>
+                            <div class="review-time">
+                                date time
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-6 user-rating">
+                            <div class="rating-star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row user-images">
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row user-review">
+                        <div class="user-review-txt">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, error?
+                        </div>
+                        <div class="like-review">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="individual-review">
+                <div class="individual-review-box ">
+                    <div class="row user-id-rating">
+                        <div class="col-md-1 user-dp">
+                            <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                        </div>
+                        <div class="col-md-3 user-name-review-time">
+                            <div class="user-name">
+                                User name
+                            </div>
+                            <div class="review-time">
+                                date time
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-6 user-rating">
+                            <div class="rating-star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row user-images">
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row user-review">
+                        <div class="user-review-txt">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, error?
+                        </div>
+                        <div class="like-review">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="individual-review">
+                <div class="individual-review-box ">
+                    <div class="row user-id-rating">
+                        <div class="col-md-1 user-dp">
+                            <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                        </div>
+                        <div class="col-md-3 user-name-review-time">
+                            <div class="user-name">
+                                User name
+                            </div>
+                            <div class="review-time">
+                                date time
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-6 user-rating">
+                            <div class="rating-star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row user-images">
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+
+                        <div class="image">
+                            <img src="./Images/realme Cobble Bluetooth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row user-review">
+                        <div class="user-review-txt">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, error?
+                        </div>
+                        <div class="like-review">
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+                                <div class="more-reviews">
+                                    More Reviews
+                                </div>
+                    </div>
+                    <%}%>
+        </div>
+
+        <div class="pre-footer">
+            <div class="card">
+                <i class="fa-solid fa-box-open" style="font-size:2rem;margin: 0 auto;"></i>
+                <h3 class="card-title" style="font-size:1rem; text-align:center;">Free Shipping</h3>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-shield-blank" style="font-size:2rem;margin: 0 auto;"></i>
+                <h3 class="card-title" style="font-size:1rem; text-align:center;">Secure Payments</h3>
+
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-indian-rupee-sign" style="font-size:2rem;margin: 0 auto;"></i>
+                <h3 class="card-title" style="font-size:1rem; text-align:center;">Cash On Delivery</h3>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-desktop" style="font-size:2rem;margin: 0 auto;"></i>
+                <h3 class="card-title" style="font-size:1rem; text-align:center;">Free Shipping</h3>
+            </div>
+        </div>
+
+        <%- include('../partials/footer') %>
+            <%- include('../partials/fontAwesome') %>
+
+                <script src="https://kit.fontawesome.com/53a3d8ca15.js" crossorigin="anonymous"></script>
+                <script src="/JS/index.js"></script>
+                <script src="/JS/product.js"></script>
+</body>
+
+</html>

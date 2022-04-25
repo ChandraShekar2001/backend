@@ -1,0 +1,103 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/Admin_head'); %>
+        <link rel="stylesheet" href="/css/Admin_User_products.css">
+        <link rel="stylesheet" href="/css/Admin_updateForm.css">
+        <title>UpdateUser</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        
+        <%- include('../partials/Admin_sidebar'); %>
+
+
+        <div class="users updateForm">
+            <div class="vl"></div>
+            <div class="container">
+                <form class="form1" action="/api/v1/admin/<%= id %>" method="POST" id="myForm">
+                    <div class="heading1">
+                        <h4 class="name">UPDATE USER</h4>
+                    </div>
+                    <div class="credentials">
+                        
+                        <input type="text" name="username" id="username" placeholder="User Name*" value="<%= user.name%>" disabled>
+                        <!-- <label for="email">Email</label> -->
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email*" value="<%= user.email%>" disabled>
+
+                        <div class="dropdown">
+                            <select name="role" id="">
+                                <option value="None">Choose Role</option>
+                                <option  name="role" value="user">user</option>
+                                <option  name="role" value="admin">admin</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark login">UPDATE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/JS/Admin_User_products.js"></script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('/backend/templates/partials/Admin_head'); %>
+        <link rel="stylesheet" href="/backend/public/css/Admin_User_producnts.css">
+        <link rel="stylesheet" href="/backend/public/css/Admin_updateForm.css">
+        <title>UpdateUser</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        
+        <%- include('/backend/templates/partials/Admin_sidebar'); %>
+
+
+        <div class="users updateForm">
+            <div class="vl"></div>
+            <div class="container">
+                <form class="form1" action="/api/v1/admin/Admin_updateForm/:<%= id %>" method="POST" id="myForm">
+                    <div class="heading1">
+                        <h4 class="name">UPDATE USER</h4>
+                    </div>
+                    <div class="credentials">
+                        
+
+                        <div class="dropdown">
+                            <button class="btn btn-dark login" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                User
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" name="role" id="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="#">Chose Role</a></li>
+                                <li><a class="dropdown-item" href="#">Admin</a></li>
+                                <li><a class="dropdown-item" href="#">User</a></li>
+                            </ul>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark login">UPDATE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/backend/public/JS/Admin_User_products.js"></script>
+</body>
+
+>>>>>>> 29aa5dbeeea7a1b161b164545c063ef0336f83e9
+</html>

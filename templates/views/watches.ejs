@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/liststyle.css">
+  <script src="/JS/clear.js" defer></script>
+
+  <title>Ecommerce</title>
+
+</head>
+
+<body>
+
+  {{>navbar}}
+  <div class="test">
+      <div class="box-drop dis">
+          <a href="/cart">Your Cart</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Checkout</a>
+      </div>
+  </div>
+
+  <div class="test1">
+      <div class="box-drop dis">
+          <h6>Welcome, {{name}}</h6>
+          <a href="/acc">Your Account</a>
+          <a href="#">Your Orders</a>
+          <a href="/logout" class="logging-out">Log out</a>
+      </div>
+  </div>
+
+
+  <!-- main div -->
+  <div class="main_div">
+    <!-- filter div -->
+    <div class="filters">
+      <div class="reset12">
+         <h4 class="heading-name">Filters</h4>
+         <div class="clearall">
+              <p class="clearbutton" onclick="clearall()">Clear All</p>
+         </div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="category">
+        <details id="details" open>
+          <summary> category</summary>
+          <input type="checkbox" id="laptop" name="laptop">
+          <label for="laptop">Laptops</label><br>
+          <input type="checkbox" id="mobile" name="mobile">
+          <label for="mobile">Mobiles</label><br>
+          <input type="checkbox" id="watch" name="watch">
+          <label for="watch">Smart Watches</label><br>
+          <input type="checkbox" id="tv" name="tv">
+          <label for="tv">Smart TV's</label>  
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="brand">
+        <details id="details" open>
+          <summary>  brand</summary>
+          <input type="checkbox" id="apple" name="apple">
+          <label for="apple">Apple</label><br>
+          <input type="checkbox" id="realme" name="realme">
+          <label for="realme">Realme</label><br>
+          <input type="checkbox" id="fossil" name="fossil">
+          <label for="fossil">Fossil</label><br>
+          <input type="checkbox" id="noise" name="noise">
+          <label for="noise">Noise</label><br>
+          <input type="checkbox" id="samsung" name="samsung">
+          <label for="samsung">Samsung</label><br>
+          <input type="checkbox" id="titan" name="titan">
+          <label for="titan">Titan</label> 
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="price">
+        <details id="details" open>
+          <summary>  Price</summary>
+          <input type="checkbox" id="1" name="1">
+          <label for="1">₹2501 - ₹5000</label><br>
+          <input type="checkbox" id="2" name="2">
+          <label for="2">₹5001 - ₹10000</label><br>
+          <input type="checkbox" id="3" name="3">
+          <label for="3">₹10001 - ₹20000</label>
+          <input type="checkbox" id="4" name="4">
+          <label for="4">₹20001 - ₹30000</label><br>
+          <input type="checkbox" id="5" name="5">
+          <label for="5">₹30001 - ₹50000</label><br>
+          <input type="checkbox" id="6" name="6">
+          <label for="6">₹50001 - ₹*</label>  
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="Rating">
+        <details id="details" open>
+          <summary>  Rating</summary>
+          <input type="checkbox" id="R1" name="R1">
+          <label for="R1">
+            <span class="inline">
+            </span>
+            <span class="outline">4
+                <img src="images/star_image.png" alt="star" class="star">
+            </span>
+            <p class="para">& Above</p>
+          </label><br>
+          <input type="checkbox" id="R2" name="R2">
+          <label for="R2">
+            <span class="inline">
+            </span>
+            <span class="outline">3
+                <img src="images/star_image.png" alt="star" class="star">
+            </span>
+            <p class="para">& Above</p>
+          </label><br>
+          <input type="checkbox" id="R2" name="R2">
+          <label for="R2">
+            <span class="inline">
+            </span>
+            <span class="outline">2
+                <img src="images/star_image.png" alt="star" class="star">
+            </span>
+            <p class="para">& Above</p>
+          </label><br>
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+      <div>
+        <details id="details" open>
+          <summary>  Availability</summary>
+          <input type="checkbox" id="A1" name="A1">
+          <label for="A1">Show in stock only</label><br> 
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+      <div></div>
+
+    </div>
+
+ <!-- product div -->
+    <div class="product-page">
+      <div class="border-line"></div>
+
+<!-- product1 -->     
+      <div class="product-single">
+        <div class="picture">
+          <div class="img">
+            <img src="images/fossil.jpg" alt="hp_pavillion">
+          </div>
+        </div>
+        <div class="productinfo_div">
+          <div class="pro_info">
+            <div class="pro_name">
+              <h5 class="heading">FOSSIL Gen 5 Carlyle HR Smartwatch</h5>
+            </div>
+            <div class="pro_rating">
+              <div class="pro_star_rating">   
+              <span class="inline">
+              </span>
+              <span class="outline">4.1
+                  <img src="images/star_image.png" alt="star" class="star">
+              </span>
+              </div>
+              <div class="pro_num_rating">
+                <span class="num_rate">2,739 Ratings</span>
+                <span style="color: #878787;"> & </span>
+                <span class="num_review">241 Reviews</span>
+              </div>
+            </div>
+            <div class="pro_list">
+              <ul>
+                <li>WearOS by Google, with Google Assistant</li>
+                <li>Music control with in-built storage</li>
+                <li>Battery Runtime: Upto 24 hrs</li>
+                <li>Swimproof (up to 3 ATM) With Call Function</li>
+                <li>Fitness & Outdoor</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro_price">
+            <div class="price_num_discount">₹18,445</div>
+            <div class="price_num_actual"><del class="crosspri">₹22,995</del>
+              <span class="pri_per_discount">19% off</span>
+            </div>
+            <div class="delivery">Free delivery</div>
+          </div>
+        </div>
+      </div>
+      <div class="border-line"></div>
+
+<!-- product2 -->
+
+<div class="product-single">
+    <div class="picture mobile">
+      <div class="img">
+        <img src="images/apiew.webp" alt="mac_M1">
+      </div>
+    </div>
+    <div class="productinfo_div">
+      <div class="pro_info">
+        <div class="pro_name">
+            <h5 class="heading">APPLE Watch SE GPS MKQ03HN/A 40 mm Aluminium Case</h5>
+        </div>
+        <div class="pro_rating">
+          <div class="pro_star_rating">   
+          <span class="inline">
+          </span>
+          <span class="outline">4.6
+              <img src="images/star_image.png" alt="star" class="star">
+          </span>
+          </div>
+          <div class="pro_num_rating">
+            <span class="num_rate">2,658 Ratings</span>
+            <span style="color: #878787;"> & </span>
+            <span class="num_review">230 Reviews</span>
+          </div>
+        </div>
+        <div class="pro_list">
+          <ul>
+            <li>attend calls and reply to messages using the GPS model</li>
+            <li>Touchscreen</li>
+            <li>Battery Runtime: Upto 18 hrs</li>
+            <li>It has a Swim Proof design</li>
+            <li>Fitness & Outdoor</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pro_price">
+        <div class="price_num_discount">₹29,850</div>
+        <div class="delivery">Free delivery</div>
+      </div>
+    </div>
+  </div>
+  <div class="border-line"></div>  
+  
+
+
+  
+  
+<div class="product-single">
+  <div class="picture mobile">
+    <div class="img">
+      <img src="images/noise1.jpg" alt="mac_M1">
+    </div>
+  </div>
+  <div class="productinfo_div">
+    <div class="pro_info">
+      <div class="pro_name">
+          <h5 class="heading">Noise ColorFit Qube SpO2 Smartwatch</h5>
+      </div>
+      <div class="pro_rating">
+        <div class="pro_star_rating">   
+        <span class="inline">
+        </span>
+        <span class="outline">4.6
+            <img src="images/star_image.png" alt="star" class="star">
+        </span>
+        </div>
+        <div class="pro_num_rating">
+          <span class="num_rate">28,483 Ratings</span>
+          <span style="color: #878787;"> & </span>
+          <span class="num_review">3,000 Reviews</span>
+        </div>
+      </div>
+      <div class="pro_list">
+        <ul>
+          <li>Touchscreen</li>
+          <li>Fitness & Outdoor</li>
+          <li>Battery Runtime: Upto 7 days</li>
+          <!-- <li>12MP + 12MP | 12MP Front Camera</li> -->
+          <li>1 Year Manufacturer Warranty</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pro_price">
+      <div class="price_num_discount">₹1,949</div>
+      <div class="price_num_actual"><del class="crosspri">₹4,999</del>
+        <span class="pri_per_discount">61% off</span>
+      </div>
+      <div class="delivery">Free delivery</div>
+    </div>
+  </div>
+</div>
+<div class="border-line"></div> 
+
+
+<div class="product-single">
+  <div class="picture mobile">
+    <div class="img">
+      <img src="images/realme.jpg" alt="mac_M1">
+    </div>
+  </div>
+  <div class="productinfo_div">
+    <div class="pro_info">
+      <div class="pro_name">
+          <h5 class="heading">Realme Watch 2 Pro</h5>
+      </div>
+      <div class="pro_rating">
+        <div class="pro_star_rating">   
+        <span class="inline">
+        </span>
+        <span class="outline">4.6
+            <img src="images/star_image.png" alt="star" class="star">
+        </span>
+        </div>
+        <div class="pro_num_rating">
+          <span class="num_rate">18,123 Ratings</span>
+          <span style="color: #878787;"> & </span>
+          <span class="num_review">1,802 Reviews</span>
+        </div>
+      </div>
+      <div class="pro_list">
+        <ul>
+          <li>1.75" HD Super Bright Touchscreen Display for fine picture quality and vivid colors</li>
+          <li>Touchscreen</li>
+          <li>Fitness & Outdoor</li>
+          <li>Battery Runtime: Upto 14 days</li>
+          <li>Heart Rate & Blood Oxygen Saturation (SpO2) Monitors</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pro_price">
+      <div class="price_num_discount">₹4,649</div>
+      <div class="price_num_actual"><del class="crosspri">₹5,999</del>
+        <span class="pri_per_discount">22% off</span>
+      </div>
+      <div class="delivery">Free delivery</div>
+    </div>
+  </div>
+</div>
+<div class="border-line"></div> 
+
+
+<div class="pagination-container">
+    <div class="pagination">
+        <a href="#" class="pagination-hover"><i class="bi bi-chevron-double-left"></i></a>
+        <a href="#" class="pagination-hover">1</a>
+        <a href="#" class="pagination-hover">2</a>
+        <a href="#" class="pagination-hover">3</a>
+        <a href="#" class="pagination-hover">4</a>
+        <a href="#" class="pagination-hover">5</a>
+        <a href="#" class="pagination-hover">6</a>
+        <a href="#" class="pagination-hover"><i class="bi bi-chevron-double-right"></i></a>
+    </div>
+    {{>fontAwesome}}
+    <script src="/JS/index.js"></script>
+</div>
+

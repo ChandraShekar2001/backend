@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/bootstrap') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+           <!-- The sidebar -->
+<div class="sidebar" style="margin-top: 6%">
+    <a class="active" href="/api/v1/dashboard/home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+    <h1 style="color:black;margin-top:10%;margin-left:10%;"><%=user.name%></h1>
+    <%- include('../partials/fontAwesome') %>
+    <script src="/JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/bootstrap') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- <link rel="stylesheet" href="/css/resetpass.css"> -->
+    <link rel="stylesheet" href="/css/resetpass.css">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-light flex">
+        <div class="container-fluid" >
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-logo black" href="#"style="font-size:2rem;margin-left:2em;">TECH</a>
+                </li>
+            </ul>
+        </div>
+    </nav>   
+
+    <div class="container">
+        
+        <form class="form1" id="myForm" method="POST" action="">
+
+            <div class="heading1">
+                <h4 class="name">RESET PASSWORD</h4>                
+            </div>
+            
+            <p class="err-mssg dis"></p>
+
+
+            <div class="credentials">
+                <input type="password" name="password" id="pwd" placeholder="New Password">
+                <input type="password" name="confirmPassword" id="cpwd" placeholder="Confirm Password">
+                <!-- <input type="checkbox" class="che" onclick="show()">show password -->
+                <button type="button" class="btn btn-dark sub-button" onclick=" validator()" >SUBMIT</button>        
+            </div>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/53a3d8ca15.js" crossorigin="anonymous"></script>
+    <script src="/JS/resetpass.js"></script>
+</body>
+</html>

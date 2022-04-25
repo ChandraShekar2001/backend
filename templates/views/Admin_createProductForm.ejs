@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('/backend/templates/partials/Admin_head'); %>
+    <link rel="stylesheet" href="/backend/public/css/Admin_User_producnts.css">
+    <link rel="stylesheet" href="/backend/public/css/Admin_updateForm.css">
+    <title>Create Product Form</title>
+</head>
+
+<body>
+ 
+    <div class="grid-container">
+        
+        <%- include('/backend/templates/partials/Admin_sidebar'); %>
+
+        <div class="users updateForm">
+            <div class="vl"></div> 
+            <div class="container containerP">
+                <form class="form2" action="/api/v1/forgot" method="POST" id="myForm">
+                    <div class="heading1">
+                        <h4 class="name createProductHeading" >CREATE PRODUCT</h4>
+                    </div>
+                    <div class="credentials credentialsP">
+                        <!-- <label for="username">User Name</label> -->
+                        <!-- <label for="email">Email</label> -->
+                        <input type="text" name="nameOfProduct" id="nameOfProduct" placeholder="Name Of Product*">
+                        <input type="number" name="cost" id="cost" placeholder="Cost Of Product*">
+                        <input type="text" name="productDiscreption" id="productDiscreption" placeholder="Product Discreption*">
+                    
+                        <div class="dropdown">
+                            <button class="btn btn-dark login" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Choose Category
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                                <li><a class="dropdown-item" href="#">Mobile</a></li>
+                                <li><a class="dropdown-item" href="#">Ear Phones</a></li>
+                                <li><a class="dropdown-item" href="#">Digital Watches</a></li>
+                                <li><a class="dropdown-item" href="#">Tv</a></li>
+                                <li><a class="dropdown-item" href="#">Camera</a></li>
+
+                            </ul>
+                        </div>
+                    
+                        <input type="number" name="stock" id="stock" placeholder="Stock*">
+                         
+                        <button type="submit" class="btn btn-dark login">CREATE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="/backend/public/JS/Admin_User_products.js"></script>
+
+</body>
+
+</html>

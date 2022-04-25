@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>payment</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- Bootstrap core CSS -->
+
+    
+  
+    
+    <!-- Custom styles for this template -->
+
+    <style>
+      body{
+        background: url('back4.jpg') no-repeat center center fixed;
+}
+  
+}
+small {
+  color: red; 
+
+}
+    </style>
+  </head>
+  <body>
+   {{>navbar}}
+    <div class="test">
+        <div class="box-drop dis">
+            <a href="/cart">Your Cart</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Checkout</a>
+        </div>
+    </div>
+
+    <div class="test1">
+        <div class="box-drop dis">
+            <h6>Welcome, {{name}}</h6>
+            <a href="/acc">Your Account</a>
+            <a href="#">Your Orders</a>
+            <a href="/logout" class="logging-out">Log out</a>
+        </div>
+    </div> 
+<div class="container" style="margin-top:5%;">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Payment page</h2>
+      <p class="lead"><strong>Proceed payment here.Its completey safe and secure</strong></p>
+    </div>
+
+    <div class="row g-5">
+    
+      <div class="align-center">
+        <h4 class="mb-3">Billing address</h4>
+        <form  id="form"  class="needs-validation" method="post" action="../index.html" onsubmit='return validateform()'>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name:</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Donald" value="" name="firstname" >
+              <small></small>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Trump"  name="lastname" value="">
+              <small></small>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email:</label>
+              <input name="email" type="text" class="form-control" id="email" placeholder="xyz@abc.com">
+              <small></small>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address:</label>
+              <input name="address" type="text" class="form-control" id="address" placeholder="perminent address">
+              
+            </div>
+
+            
+
+            <div class="col-md-7">
+              <label for="state" class="form-label">State</label>
+              <select name="state" class="form-control" name="" id="state">
+                <option value="">Andhra Pradesh</option>
+                <option value="">Tamil Nadu</option>
+                <option value="">Karnataka</option>
+                <option value="">Kerala</option>
+                <option value="">Telangana</option>
+              </select>
+              
+            </div>
+
+            <div class="col-md-5">
+              <label for="zip" class="form-label">Zip</label>
+              <input name="zip" type="number" class="form-control" id="zip" placeholder="" required>
+              
+            </div>
+          </div>
+          <hr class="my-4">
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">enter carefully</small>
+              
+            </div>
+
+            <div class="col-6">
+              <label for="cc-number" class="form-label">Credit card number</label>
+              <input type="number" class="form-control" id="cc-number" placeholder="" required>
+              
+            </div>
+          </div>
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">proceed</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; ffsd project</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="../index.html">home</a></li>
+      <li class="list-inline-item"><a href="#">about</a></li>
+    </ul>
+  </footer>
+</div>
+    {{>footer}}
+    {{>fontAwesome}}
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+    <script src="/JS/checkout.js"></script>
+
+  </body>
+</html>

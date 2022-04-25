@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a href="" class="black font-poppin">TECH</a>
+        </div>
+
+        <div class="products">
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-close-white dropdown-toggle font-poppin black" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <li><a class="dropdown-item" href="#">Smart Phones</a></li>
+                  <li><a class="dropdown-item" href="#">Tablets</a></li>
+                  <li><a class="dropdown-item" href="#">Smart Watches</a></li>
+                  <li><a class="dropdown-item" href="#">Speakers</a></li>
+                </ul>
+              </div>
+        </div>
+        <div class="search">
+            <input type="search black font-poppin" name="search" id="search-header" placeholder="Search...">
+        </div>
+
+        <ul class="nav-list">
+            <li class="item  font-poppin"><a href="#" class="font-poppin black">Home</a></li>
+            <li class="item  font-poppin"><a href="#" class="font-poppin black">Contact</a></li>
+            <li class="item"><i class="fa-solid fa-bag-shopping purple cart-link"></i></li>
+            <li class="item "><i class="fa-solid fa-user purple user-icon"></i></li>
+        </ul>
+    </nav>
+
+    <div class="test">
+        <div class="box-drop dis">
+            <a href="#">Your Cart</a>
+            <a href="#">Checkout</a>
+        </div>
+    </div>
+
+    <div class="test1">
+        <div class="box-drop dis">
+            <h6>Welcome</h6>
+            <a href="#">Your Profile</a>
+            <a href="#">Your Orders</a>
+        </div>
+    </div>
+
+
+    <div class="all-cart-details ">
+        <div class="cart-details-box-main border">
+            <div class="main-heading">
+                Cart Details
+            </div>
+            <div class="all-cart-details-box">
+                
+                <div class="row">
+                    <div class="col-md-2 detail-headings">Subtotal</div>
+                    <div class="col-md-2 offset-md-8 detail-values">15000</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 detail-headings">Tax (5%)</div>
+                    <div class="col-md-2 offset-md-8 detail-values">500</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 detail-headings">Shipping</div>
+                    <div class="col-md-2 offset-md-8 detail-values">250</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 detail-headings">Grand Total</div>
+                    <div class="col-md-2 offset-md-8 detail-values">15230</div>
+                </div>
+                
+                <div class="row cart-checkout">
+                    <a href="" class="">Checkout</a>
+                </div>
+            </div>
+        </div>
+        <div class="cart-items-box-main border">
+            <div class="main-heading">
+                Cart Items
+            </div>
+            <div class="all-cart-items-box">
+                <div class="individual-cart-item-box">
+                    <div class="individual-cart-item">
+                        <div class="row user-id-rating">
+                            <div class="col-md-2 Product-img">
+                                <img src="./Images/Dp-for-reviews.jpeg" alt="...">
+                            </div>
+                            <div class="col-md-3 Product-name">
+                                <div class="user-name">
+                                    name
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-2 Product-quantity">
+                                <input type="number" value="1" min="1">
+                            </div>
+
+                            <div class="col-md-3 Product-cost-box">
+                                <div class="Product-cost">
+                                    <i class="fa-solid fa-indian-rupee-sign"style="font-size: 1.2rem;margin: 0 auto;"></i>5000
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-2 Product-delete ">
+                                <form action="none" method="post" >Remove</form>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pre-footer">
+        <div class="card">
+            <i class="fa-solid fa-box-open" style="font-size:2rem;margin: 0 auto;"></i>
+            <h3 class="card-title" style="font-size:1rem; text-align:center;">Free Shipping</h3>
+        </div>
+
+
+        <div class="card">
+            <i class="fa-solid fa-shield-blank" style="font-size:2rem;margin: 0 auto;"></i>
+            <h3 class="card-title" style="font-size:1rem; text-align:center;">Secure Payments</h3>
+
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-indian-rupee-sign" style="font-size:2rem;margin: 0 auto;"></i>
+            <h3 class="card-title" style="font-size:1rem; text-align:center;">Cash On Delivery</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-desktop" style="font-size:2rem;margin: 0 auto;"></i>
+            <h3 class="card-title" style="font-size:1rem; text-align:center;">Free Shipping</h3>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <label for="email" style="text-transform: uppercase;font-size: 1.25rem;">Let's stay in touch(Newsletter)
+        </label><br>
+        <input type="email" name="email" id="email" class="email-footer" placeholder="Email address">
+    </footer>
+    <script src="https://kit.fontawesome.com/53a3d8ca15.js" crossorigin="anonymous"></script>
+    <script src="test.js"></script>
+</body>
+</html>

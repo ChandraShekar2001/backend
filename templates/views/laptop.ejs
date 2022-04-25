@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/liststyle.css">
+
+  <title>Ecommerce</title>
+</head>
+
+<body>
+
+  {{>navbar}}
+
+   <div class="test">
+        <div class="box-drop dis">
+            <a href="/cart">Your Cart</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Checkout</a>
+        </div>
+    </div>
+
+    <div class="test1">
+        <div class="box-drop dis">
+            <h6>Welcome, {{name}}</h6>
+            <a href="/acc">Your Account</a>
+            <a href="#">Your Orders</a>
+            <a href="/logout" class="logging-out">Log out</a>
+        </div>
+    </div>
+  <!-- main div -->
+  <div class="main_div">
+    <!-- filter div -->
+    <div class="filters">
+      <div class="reset12">
+         <h4 class="heading-name">Filters</h4>
+         <div class="clearall">
+              <p class="clearbutton" onclick="clearall()">Clear All</p>
+         </div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="category">
+        <details id="details" open>
+          <summary> category</summary>
+          <input type="checkbox" id="laptop" name="laptop">
+          <label for="laptop">Laptops</label><br>
+          <input type="checkbox" id="mobile" name="mobile">
+          <label for="mobile">Mobiles</label><br>
+          <input type="checkbox" id="watch" name="watch">
+          <label for="watch">Smart Watches</label><br>
+          <input type="checkbox" id="tv" name="tv">
+          <label for="tv">Smart TV's</label>  
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="brand">
+        <details id="details" open>
+          <summary>  brand</summary>
+          <input type="checkbox" id="apple" name="apple">
+          <label for="apple">Apple</label><br>
+          <input type="checkbox" id="samsung" name="samsung">
+          <label for="samsung">Hp</label><br>
+          <input type="checkbox" id="realme" name="realme">
+          <label for="realme">Dell</label><br>
+          <input type="checkbox" id="vivo" name="vivo">
+          <label for="vivo">Acer</label><br>
+          <input type="checkbox" id="sony" name="sony">
+          <label for="sony">Asus</label><br>
+          <input type="checkbox" id="toshiba" name="toshiba">
+          <label for="toshiba">Toshiba</label> 
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="price">
+        <details id="details" open>
+          <summary>  Price</summary>
+          <input type="checkbox" id="1" name="1">
+          <label for="1">₹2501 - ₹5000</label><br>
+          <input type="checkbox" id="2" name="2">
+          <label for="2">₹5001 - ₹10000</label><br>
+          <input type="checkbox" id="3" name="3">
+          <label for="3">₹10001 - ₹20000</label>
+          <input type="checkbox" id="4" name="4">
+          <label for="4">₹20001 - ₹30000</label><br>
+          <input type="checkbox" id="5" name="5">
+          <label for="5">₹30001 - ₹50000</label><br>
+          <input type="checkbox" id="6" name="6">
+          <label for="6">₹50001 - ₹*</label>  
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+
+      <div class="Rating">
+        <details id="details" open>
+          <summary>  Rating</summary>
+          <input type="checkbox" id="R1" name="R1">
+          <label for="R1">
+            <span class="inline">
+            </span>
+            <span class="outline">4
+                <img src="Images/star_image.png" alt="star" class="star">
+            </span>
+            <p class="para">& Above</p>
+          </label><br>
+          <input type="checkbox" id="R2" name="R2">
+          <label for="R2">
+            <span class="inline">
+            </span>
+            <span class="outline">3
+                <img src="images/star_image.png" alt="star" class="star">
+            </span>
+            <p class="para">& Above</p>
+          </label><br>
+          <input type="checkbox" id="R2" name="R2">
+          <label for="R2">
+            <span class="inline">
+            </span>
+            <span class="outline">2
+                <img src="images/star_image.png" alt="star" class="star">
+            </span>
+            <p class="para">& Above</p>
+          </label><br>
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+      <div>
+        <details id="details" open>
+          <summary>  Availability</summary>
+          <input type="checkbox" id="A1" name="A1">
+          <label for="A1">Show in stock only</label><br> 
+        </details>
+       <div class="reset"></div>
+      </div>
+      <div class="border-line"></div>
+      <div></div>
+
+    </div>
+
+ <!-- product div -->
+    <div class="product-page">
+      <div class="border-line"></div>
+
+<!-- product1 -->     
+      <div class="product-single">
+        <div class="picture laptop">
+          <div class="img">
+            <img src="images/hppav.png" alt="hp_pavillion">
+          </div>
+        </div>
+        <div class="productinfo_div">
+          <div class="pro_info">
+            <div class="pro_name">
+              <h5 class="heading">HP Pavilion Ryzen 5 Hexa Core 5600H - (8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce
+                GT...</h5>
+            </div>
+            <div class="pro_rating">
+              <div class="pro_star_rating">   
+              <span class="inline">
+              </span>
+              <span class="outline">3.9
+                  <img src="images/star_image.png" alt="star" class="star">
+              </span>
+              </div>
+              <div class="pro_num_rating">
+                <span class="num_rate"> 12,556 Ratings</span>
+                <span style="color: #878787;"> & </span>
+                <span class="num_review">3,567 Reviews</span>
+              </div>
+            </div>
+            <div class="pro_list">
+              <ul>
+                <li>AMD Ryzen 5 Hexa Core Processor</li>
+                <li>8 GB DDR4 RAM</li>
+                <li>64 bit Windows 11 Operating System</li>
+                <li>512 GB SSD</li>
+                <li>39.62 cm (15.6 inch) Display</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro_price">
+            <div class="price_num_discount">₹60,790</div>
+            <div class="price_num_actual"><del class="crosspri">₹75,990</del>
+              <span class="pri_per_discount">20% off</span>
+            </div>
+            <div class="delivery">Free delivery</div>
+          </div>
+        </div>
+      </div>
+      <div class="border-line"></div>
+
+<!-- product2 -->
+
+<div class="product-single">
+    <div class="picture">
+      <div class="img">
+        <img src="images/macbook-air-silver-select-201810.jpg" alt="mac_M1">
+      </div>
+    </div>
+    <div class="productinfo_div">
+      <div class="pro_info">
+        <div class="pro_name">
+            <h5 class="heading">APPLE 2020 Macbook Air M1 - (8 GB/256 GB SSD/Mac OS Big Sur) MGN63HN/A</h5>
+        </div>
+        <div class="pro_rating">
+          <div class="pro_star_rating">   
+          <span class="inline">
+          </span>
+          <span class="outline">4.3
+              <img src="images/star_image.png" alt="star" class="star">
+          </span>
+          </div>
+          <div class="pro_num_rating">
+            <span class="num_rate"> 11,366 Ratings</span>
+            <span style="color: #878787;"> &</span>
+            <span class="num_review">5,449 Reviews</span>
+          </div>
+        </div>
+        <div class="pro_list">
+          <ul>
+            <li>Apple M1 Processorr</li>
+            <li>8 GB DDR4 RAM</li>
+            <li>Mac OS Operating System</li>
+            <li>256 GB SSD</li>
+            <li>33.78 cm (13.3 inch) Display</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pro_price">
+        <div class="price_num_discount">₹84,940</div>
+        <div class="price_num_actual"><del class="crosspri">₹92,900</del>
+          <span class="pri_per_discount">9% off</span>
+        </div>
+        <div class="delivery">Free delivery</div>
+      </div>
+    </div>
+  </div>
+  <div class="border-line"></div>   
+<!-- product3 -->
+
+
+<div class="product-single">
+  <div class="picture">
+    <div class="img">
+      <img src="images/legion_lenovo.jpg" alt="mac_M1">
+    </div>
+  </div>
+  <div class="productinfo_div">
+    <div class="pro_info">
+      <div class="pro_name">
+          <h5 class="heading">Lenovo Legion 5 10th Gen Intel Core i5-10300H 15.6" (39.63cm) FHD IPS Gaming Laptop (8GB/512GB SSD/Windows 10/NVIDIA GTX 1650 4GB/120Hz Refresh Display/Phantom Black/2.3Kg), 82AU00PMIN</h5>
+      </div>
+      <div class="pro_rating">
+        <div class="pro_star_rating">   
+        <span class="inline">
+        </span>
+        <span class="outline">4.1
+            <img src="images/star_image.png" alt="star" class="star">
+        </span>
+        </div>
+        <div class="pro_num_rating">
+          <span class="num_rate"> 8,456 Ratings</span>
+          <span style="color: #878787;"> &</span>
+          <span class="num_review">1,346 Reviews</span>
+        </div>
+      </div>
+      <div class="pro_list">
+        <ul>
+          <li>10th Gen Intel Core i5-10300H</li>
+          <li>8GB RAM DDR4-2933/li>
+          <li> Pre-Loaded Windows 10 Home with Lifetime Validity</li>
+          <li>512 GB SSD<</li>
+          <li>Display: 15.6" Full HD (1920x1080) | Wide Viewing Angle</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pro_price">
+      <div class="price_num_discount">₹74,000</div>
+      <div class="price_num_actual"><del class="crosspri">₹93,690</del>
+        <span class="pri_per_discount">21% off</span>
+      </div>
+      <div class="delivery">Free delivery</div>
+    </div>
+  </div>
+</div>
+<div class="border-line"></div> 
+
+<!-- product4 -->
+
+
+
+<div class="product-single">
+  <div class="picture">
+    <div class="img">
+      <img src="images/dell_inspiron1.jpg" alt="mac_M1">
+    </div>
+  </div>
+  <div class="productinfo_div">
+    <div class="pro_info">
+      <div class="pro_name">
+          <h5 class="heading">Dell Inspiron 5418 Intel i5-11300H 14 inches FHD Display Laptop ( 16GB / 512GB SSD / Integrated Graphics / Windows 10 + MSO / Backlit KB + FPR / Silver Color) D560481WIN9S, 1.43kg</h5>
+      </div>
+      <div class="pro_rating">
+        <div class="pro_star_rating">   
+        <span class="inline">
+        </span>
+        <span class="outline">4.7
+            <img src="images/star_image.png" alt="star" class="star">
+        </span>
+        </div>
+        <div class="pro_num_rating">
+          <span class="num_rate"> 9,882 Ratings</span>
+          <span style="color: #878787;"> &</span>
+          <span class="num_review">4,976 Reviews</span>
+        </div>
+      </div>
+      <div class="pro_list">
+        <ul>
+          <li>11th Generation Intel Core i5-11300H Processor</li>
+          <li>16 GB DDR4 RAM</li>
+          <li>Windows 10 Home Single Language</li>
+          <li>512GB SSD</li>
+          <li>14.0-inch FHD (1920 x 1080) Display3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pro_price">
+      <div class="price_num_discount">₹66,000</div>
+      <div class="price_num_actual"><del class="crosspri">₹89,849</del>
+        <span class="pri_per_discount">27% off</span>
+      </div>
+      <div class="delivery">Free delivery</div>
+    </div>
+  </div>
+</div>
+<div class="border-line"></div> 
+
+
+<div class="pagination-container">
+  <div class="pagination">
+      <a href="#" class="pagination-hover"><i class="bi bi-chevron-double-left"></i></a>
+      <a href="#" class="pagination-hover">1</a>
+      <a href="#" class="pagination-hover">2</a>
+      <a href="#" class="pagination-hover">3</a>
+      <a href="#" class="pagination-hover">4</a>
+      <a href="#" class="pagination-hover">5</a>
+      <a href="#" class="pagination-hover">6</a>
+      <a href="#" class="pagination-hover"><i class="bi bi-chevron-double-right"></i></a>
+  </div>
+
+  {{!-- {{>footer}} --}}
+  {{>fontAwesome}}
+  <script src="/JS/clear.js"></script>
+  <script src="/JS/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</div>

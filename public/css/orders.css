@@ -1,0 +1,32 @@
+.main-heading{
+    margin-top: 8%;
+    margin-left: 40%;
+}
+
+.order-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:1000px;
+    width:1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-top:1%;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 400px;
+    width: 290px;
+    border: 1px solid black;
+    margin: 3px;
+}
+
+.card img{
+    height: 80%;
+    border: 1px solid black;
+}
+
+.line{
+    margin-left: 20%;
+}

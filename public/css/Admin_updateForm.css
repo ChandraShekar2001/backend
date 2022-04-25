@@ -1,0 +1,340 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+
+/* updateForm  */
+
+body {
+    background: #f5f5f5;
+}
+
+.heading1 .name {
+    margin-left: 110px;
+    font-weight: 900;
+    font-size: 20px;
+    /* margin-bottom: 500%; */
+}
+
+.updateForm{
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
+}
+
+.container {
+    height: 600px;
+    width: 400px;
+    margin: 10px auto;
+    /* border: 1px solid black;  */
+}
+
+.containerP {
+    height: 600px;
+    width: 400px;
+    margin: 10px auto;
+    /* border: 1px solid black;  */
+}
+
+body .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .heading1 {
+    margin: 0 40%;
+}
+
+.container .createProductHeading{
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    display: inline-block;
+    text-align: center;
+}
+
+.container form h4 {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    display: inline-block;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+.credentials {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 230px;
+    width: 270px;
+    /* border: 2px solid black; */
+    margin: 15% auto;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 500;
+}
+
+.credentialsP {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 270px;
+    /* border: 2px solid black; */
+    margin: 15% auto;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 500;
+}
+
+
+form {
+    position: relative;
+    display: inline-block;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 400px;
+    width: 380px;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 6%;
+}
+
+.form2{
+    position: relative;
+    display: inline-block;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 530px;
+    width: 380px;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 6%;
+}
+
+input {
+    border-radius: 5px;
+    margin: 10px;
+    background: none;
+    height: 35px;
+    width: 100%;
+    padding: 0.5em;
+    outline: none;
+    border: 1px solid rgb(177, 173, 173);
+}
+
+input:hover {
+    border: solid 2px rgb(143, 143, 143);
+}
+
+.btn {
+    width: 100%;
+    margin: 20px;
+    padding: 5px;
+}
+
+#dropdownMenuButton1 {
+    margin: 10px;
+    padding: 6px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px rgb(177, 173, 173);
+    color: rgb(87, 82, 82);
+    width: 270px;
+}
+
+#dropdownMenuButton1:hover {
+    border: solid 2px rgb(143, 143, 143);
+}
+
+.dropdown-menu {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px rgb(177, 173, 173);
+    color: black;
+    width: 270px;
+}
+
+.dropdown select{
+    width: 270px;
+    height: 35px;
+    border-radius: 5px;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+
+/* updateForm  */
+
+body {
+    background: #f5f5f5;
+}
+
+.heading1 .name {
+    margin-left: 110px;
+    font-weight: 900;
+    font-size: 20px;
+    /* margin-bottom: 500%; */
+}
+
+.updateForm{
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
+}
+
+.container {
+    height: 600px;
+    width: 400px;
+    margin: 10px auto;
+    /* border: 1px solid black;  */
+}
+
+.containerP {
+    height: 600px;
+    width: 400px;
+    margin: 10px auto;
+    /* border: 1px solid black;  */
+}
+
+body .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .heading1 {
+    margin: 0 40%;
+}
+
+.container .createProductHeading{
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    display: inline-block;
+    text-align: center;
+}
+
+.container form h4 {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    display: inline-block;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+.credentials {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 230px;
+    width: 270px;
+    /* border: 2px solid black; */
+    margin: 15% auto;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 500;
+}
+
+.credentialsP {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 270px;
+    /* border: 2px solid black; */
+    margin: 15% auto;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 500;
+}
+
+
+form {
+    position: relative;
+    display: inline-block;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 400px;
+    width: 380px;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 6%;
+}
+
+.form2{
+    position: relative;
+    display: inline-block;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 530px;
+    width: 380px;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 6%;
+}
+
+input {
+    border-radius: 5px;
+    margin: 10px;
+    background: none;
+    height: 35px;
+    width: 100%;
+    padding: 0.5em;
+    outline: none;
+    border: 1px solid rgb(177, 173, 173);
+}
+
+input:hover {
+    border: solid 2px rgb(143, 143, 143);
+}
+
+.btn {
+    width: 100%;
+    margin: 20px;
+    padding: 5px;
+}
+
+#dropdownMenuButton1 {
+    margin: 10px;
+    padding: 6px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px rgb(177, 173, 173);
+    color: rgb(87, 82, 82);
+    width: 270px;
+}
+
+#dropdownMenuButton1:hover {
+    border: solid 2px rgb(143, 143, 143);
+}
+
+.dropdown-menu {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px rgb(177, 173, 173);
+    color: black;
+    width: 270px;
+>>>>>>> 29aa5dbeeea7a1b161b164545c063ef0336f83e9
+}

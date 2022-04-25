@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/bootstrap') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/login1.css">
+    <link rel="stylesheet" href="/css/forgot.css">
+
+    <title>Document</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-light flex">
+        <div class="container-fluid" >
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-logo black" href="#"style="font-size:2rem;margin-left:2em;">TECH</a>
+                </li>
+            </ul>
+        </div>
+    </nav>   
+
+    <div class="container">
+        
+        <form class="form1" action="/api/v1/password/forgot"  method="POST" id="myForm" >
+
+            <div class="heading1">
+                <h4 class="name">FORGOT PASSWORD</h4>                
+            </div>
+
+            <% if(err==''){%>
+                <p class="err-mssg dis"><%=err%><i class="fa-solid fa-xmark"></i></p>
+            <% } %> 
+            <% if(err=="Link has been sent to mail"){%>
+                <p class="err-sent"><%=err%><i class="fa-solid fa-xmark"></i></p>
+            <%}%> 
+            <% if(err=="Invalid email"){ %>
+                <p class="err-mssg"><%=err%><i class="fa-solid fa-xmark"></i></p>
+            <% } %>
+            <% if(err=="Please enter requires fields") {%> 
+                <p class="err-mssg"><%=err%><i class="fa-solid fa-xmark"></i></p>
+            <% } %>  
+
+            <div class="credentials">
+                <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                <button type="submit" class="btn btn-dark login" >GET VERIFICATION LINK</button>        
+            </div>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/53a3d8ca15.js" crossorigin="anonymous"></script>
+    <script src="/JS/forgot.js"></script>
+</body>
+</html>

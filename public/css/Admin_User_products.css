@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Montserrat:ital,wght@0,400;1,100;1,600&family=Poppins:wght@100;200;300;400;700&display=swap');
+
+
+body {
+    background-color: rgb(253, 252, 252);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 22% 79%;
+    position: relative;
+}
+
+#ecommerce-heading {
+    margin: 20px 5px 0px 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.typesnav .navnames :hover{
+    color:rgb(170, 155, 255);
+    margin: 1px;
+    padding: 1px;
+}
+
+.typesnav {
+    padding: 5px;
+    margin:50px 5px 5px 5px;
+}
+
+.navnames {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    margin: 20px;
+}
+
+.navnames a {
+    color: black;
+    text-decoration: none;
+}
+
+.products{
+    padding: 5px;
+    margin: 5px;
+    display: none;
+}
+
+
+.side-navbar {
+    margin: 5px;
+}
+
+.all-users {
+    font-family: sans-serif;
+    margin: 35px;
+}
+
+
+.users {
+    display: flex;
+    text-align: center;
+    justify-content: end;
+    background: rgb(247, 255, 253);
+}
+
+.vl {
+    border-left: 1px solid rgb(202, 202, 202);
+    height: 100%;
+}
+
+.container-users {
+    padding: 2px;
+    width: 100%;
+    height: auto;
+}
+
+.table-striped {
+    border: solid 1px rgb(226, 245, 196);
+    box-shadow: 2px 4px rgb(197, 190, 190);
+}
+
+.table-headings {
+    background: rgb(46, 38, 92);
+    color: white;
+}
+
+.table-rows a {
+    padding: 3px;
+    margin: 2px 8px;
+}
+
+<<<<<<< HEAD
+.table-rows form{
+    display: inline-block
+}
+
+.table-rows form button{
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-radius: 50px;
+}
+
+.table-rows form button:hover{
+    background-color: #efefef;
+}
+
+.table-rows form .bi{
+    color: blue;
+}
+=======
+
+/* ##########################3 */
+
+
+
+>>>>>>> 29aa5dbeeea7a1b161b164545c063ef0336f83e9

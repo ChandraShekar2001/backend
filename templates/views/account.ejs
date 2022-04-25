@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/bootstrap') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/account.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+     <div class="test">
+        <div class="box-drop dis">
+            <a href="/cart">Your Cart</a>
+            <a href="/wishlist">Wishlist</a>
+            <a href="/cart">Checkout</a>
+        </div>
+    </div>
+
+    <div class="test1">
+        <div class="box-drop dis">
+            <h6>Welcome, {{name}}</h6>
+            <a href="/acc">Your Account</a>
+            <a href="/orders">Your Orders</a>
+            <a href="/logout" class="logging-out">Log out</a>
+        </div>
+    </div>
+    <div class="main-title">
+        <div class="icon">
+            <i class="fa-solid fa-user-large"></i>
+        </div>
+        <h3>Your Account</h3>
+        <div class="line"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-item orders"><a href="/orders" style="color:black">Your Orders</a></div>
+        <div class="main-item Returns"><a href="/orders" style="color:black">Returns</a></div>
+        <div class="main-item Edit details"><a href="/api/v1/me/acc/profile" style="color:black">Profile</a></div>
+    </div>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/fontAwesome') %>
+    <script src="/JS/index.js"></script>
+</body>
+</html>
